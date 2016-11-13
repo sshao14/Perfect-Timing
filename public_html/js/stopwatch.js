@@ -137,6 +137,10 @@ function display(watch) {
 /* Prepration to start tick */
 function startWatch(watch) {
     countTarget = document.getElementById('count_target').value;
+    /* check whether input is valid */
+    if(countTarget.isNaN()) {
+        countTarget = 0;
+    }
     
     /* Stopwatch type: count up */
     if(watch.direction === 1) {
@@ -189,6 +193,10 @@ function pauseWatch(watch) {
 /* reset timer */
 function resetWatch(watch) {
     countTarget = document.getElementById('count_target').value;
+    /* check whether input is valid */
+    if(countTarget.isNaN()) {
+        countTarget = 0;
+    }
 
     /* Stopwatch type: count up */
     if(watch.direction === 1) {
