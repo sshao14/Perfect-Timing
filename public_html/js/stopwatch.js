@@ -13,7 +13,7 @@ var countUpWatch = {
     min: 0,
     sec: 0,
     active: 0,          //1 for active, 0 for stopped
-    target: 0,
+    target: -1,
     current: 0,         //total seconds counted
     direction: 1        //1 for count up, -1 for dount down
 };
@@ -24,7 +24,7 @@ var countDownWatch = {
     min: 0,
     sec: 0,
     active: 0,          //1 for active, 0 for stopped
-    target: 0,
+    target: -1,
     current: 0,         //total seconds counted
     direction: -1       //1 for count up, -1 for dount down
 };
@@ -140,8 +140,8 @@ function startWatch(watch) {
     
     /* Stopwatch type: count up */
     if(watch.direction === 1) {
-        /* Reset target time if input changed */
-        if(watch.target !== countTarget) {
+        /* Set target time if first time invoking */
+        if(watch.target === -1) {
             watch.target = countTarget;
             watch.current = 0;
             resetTime(watch, 0);
@@ -154,8 +154,8 @@ function startWatch(watch) {
     
     /* Stopwatch type: count down */
     else if(watch.direction === -1) {
-        /* Reset target time if input changed */
-        if(watch.target !== countTarget) {
+        /* Reset target time if first time invoking */
+        if(watch.target === -1) {
             watch.target = countTarget;
             watch.current = 0;
             resetTime(watch, countTarget);
