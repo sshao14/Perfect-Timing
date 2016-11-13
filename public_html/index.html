@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./js/stopwatch.js"></script>
+        <meta charset="UTF-8"/> 
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Perfect Timing</title>
+    </head>
+    
+    <body>
+        <h1>Perfect Timing</h1>
+        <div id="timer_1">
+            <h3>Count Up</h3>
+                <div class="timer_display_1" id="display_1"> 
+                    0 day 0 hour 0 minute 0 second
+                </div>
+        </div>
+            <span class="control_set_1">
+                <input type="button" id="start_up_button" value="start" onclick="start_1()" />
+            </span>
+            <span class="control_set_1">
+                <input type="button" id="stop_up_button" value="stop" onclick="pause_1()" />
+            </span>
+            <span class="control_set_1">
+                <input type="button" id="reset_up_button" value="reset" onclick="reset_1()" />
+            </span> 
+        
+        <div id = "timer_2">
+            <h3>Count Down</h3>
+                <div class="timer_display_2" id="display_2"> 
+                    0 day 0 hour 0 minute 0 second
+                    </div>
+                </div>
+            <span class="control_set_2">
+                <input type="button" id="start_down_button" value="start" onclick="start_2()" />
+            </span>
+            <span class="control_set_2">
+                <input type="button" id="stop_down_button" value="stop" onclick="pause_2()" />
+            </span>
+            <span class="control_set_2">
+                <input type="button" id="reset_down_button" value="reset" onclick="reset_2()" />
+            </span>
+        
+        <form id="target">
+            Timer:<br>
+            <input type="text" id="count_target" value="0"><br>
+        </form>
+         <script>
+            init();
+        </script>
+    </body>
+</html>
