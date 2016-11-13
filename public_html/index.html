@@ -9,12 +9,16 @@
     
     <body>
         <h1>Perfect Timing</h1>
-        <div id="timer_1">
+        <form id="target">
+            <h4>Set Time</h4>
+            <input type="text" id="count_target" value="0"><br>
+        </form>
+        
+        <div class="timer_1">
             <h3>Count Up</h3>
-                <div class="timer_display_1" id="display_1"> 
+                <div id="display_1"> 
                     0 day 0 hour 0 minute 0 second
                 </div>
-        </div>
             <span class="control_set_1">
                 <input type="button" id="start_up_button" value="start" onclick="start_1()" />
             </span>
@@ -24,13 +28,13 @@
             <span class="control_set_1">
                 <input type="button" id="reset_up_button" value="reset" onclick="reset_1()" />
             </span> 
+        </div>
         
-        <div id = "timer_2">
+        <div class = "timer_2">
             <h3>Count Down</h3>
-                <div class="timer_display_2" id="display_2"> 
+                <div id="display_2"> 
                     0 day 0 hour 0 minute 0 second
                     </div>
-                </div>
             <span class="control_set_2">
                 <input type="button" id="start_down_button" value="start" onclick="start_2()" />
             </span>
@@ -40,11 +44,7 @@
             <span class="control_set_2">
                 <input type="button" id="reset_down_button" value="reset" onclick="reset_2()" />
             </span>
-        
-        <form id="target">
-            Timer:<br>
-            <input type="text" id="count_target" value="0"><br>
-        </form>
+        </div>
          <script>
             init();
         </script>

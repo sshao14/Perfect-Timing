@@ -1,6 +1,11 @@
+.timer_1 {
+    margin: 5px 5px;
+    display: inline;
+}
 
-.timer_display_1 {
-
+.timer_2 {
+    margin: 5px 5px;
+    display: inline;
 }
 
 .display_1 {
@@ -8,10 +13,6 @@
 }
 
 .control_set_1 {
-
-}
-
-.timer_display_2 {
 
 }
 
