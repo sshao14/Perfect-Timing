@@ -140,7 +140,6 @@ function startWatch(watch) {
     /* check whether input is valid */
     if(countTarget % 1 !== 0) {
         countTarget = 0;
-        return;
     }
     
     /* Stopwatch type: count up */
