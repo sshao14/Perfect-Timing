@@ -204,8 +204,14 @@ function resetWatch(watch) {
         watch.target = countTarget;
         watch.current = 0;
         resetTime(watch, 0);
-        document.getElementById("start_up_button").disabled = false;
-        document.getElementById("stop_up_button").disabled = false;
+        if(watch.active === 1) {
+            document.getElementById("start_up_button").disabled = true;
+            document.getElementById("stop_up_button").disabled = false;
+        }
+        else {
+            document.getElementById("start_up_button").disabled = false;
+            document.getElementById("stop_up_button").disabled = true;
+        }
     }
     
     /* Stopwatch type: count down */
@@ -213,8 +219,14 @@ function resetWatch(watch) {
         watch.target = countTarget;
         watch.current = 0;
         resetTime(watch, countTarget);
-        document.getElementById("start_down_button").disabled = false;
-        document.getElementById("stop_down_button").disabled = false;
+        if(watch.active === 1) {
+            document.getElementById("start_down_button").disabled = true;
+            document.getElementById("stop_down_button").disabled = false;
+        }
+        else {
+            document.getElementById("start_down_button").disabled = false;
+            document.getElementById("stop_down_button").disabled = true;
+        }
     }
 }
 
