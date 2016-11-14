@@ -138,8 +138,9 @@ function display(watch) {
 function startWatch(watch) {
     countTarget = document.getElementById('count_target').value;
     /* check whether input is valid */
-    if(countTarget.isNaN()) {
+    if(countTarget % 1 !== 0) {
         countTarget = 0;
+        return;
     }
     
     /* Stopwatch type: count up */
@@ -194,8 +195,9 @@ function pauseWatch(watch) {
 function resetWatch(watch) {
     countTarget = document.getElementById('count_target').value;
     /* check whether input is valid */
-    if(countTarget.isNaN()) {
+    if(countTarget % 1 !== 0) {
         countTarget = 0;
+        return;
     }
 
     /* Stopwatch type: count up */
